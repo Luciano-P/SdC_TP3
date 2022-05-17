@@ -76,7 +76,7 @@ comienzo:
         /* 0xb8000 == magic video memory address which shows on the screen. */
         lea 0xb8000(%eax), %edx
         /* White on black. */
-        mov $0x0f, %ah
+        mov $0x20, %ah
     loop:
         mov (%ecx), %al
         cmp $0, %al
