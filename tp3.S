@@ -62,8 +62,8 @@ comienzo:
         mov $0X7000, %ebp
         mov %ebp, %esp
 
-    impresion:                          /* Configuración de la memoria de video VGA */
-        mov $mensaje, %ecx
+    print:                              /* Configuración de la memoria de video VGA */
+        mov $message, %ecx
         mov vga_current_line, %eax
         mov $10, %edx
         mov $25, %ebx                   /* Numero de lineas horizontales */
@@ -84,5 +84,5 @@ comienzo:
     end:
         hlt
 
-    mensaje:
-        .asciz "Hello world personalizado"
+    message:
+        .asciz "#ASM-Killer"
